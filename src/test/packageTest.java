@@ -23,4 +23,15 @@ public class packageTest {
     }
 
 
+    @Test
+    public void testSendPackage(){
+        Package pkg = new Package(5);
+        Shipping shipping = new StandardShipping();
+        pkg.setShipping(shipping);
+        assertEquals(pkg.getState().getClass(), InTransitState.class);
+        pkg.send();
+        assertEquals(pkg.getState().getClass(), DeliveredState.class);
+    }
+
+
 }
