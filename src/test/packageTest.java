@@ -1,4 +1,7 @@
 import org.junit.Test;
+import code.Package;
+import code.*;
+
 import static org.junit.Assert.*;
 
 public class packageTest {
@@ -14,12 +17,12 @@ public class packageTest {
         Shipping shipping = new StandardShipping();
         pkg.setShipping(shipping);
         double actualPrice = 2.5*5;
-        assertEquals(shipping.getShippingPrice(), actualPrice);
+        assertEquals(pkg.getShippingPrice(), actualPrice);
 
         shipping = new ExpressShipping();
         pkg.setShipping(shipping);
         actualPrice = 3.5*5;
-        assertEquals(shipping.getShippingPrice(), actualPrice);
+        assertEquals(pkg.getShippingPrice(), actualPrice);
     }
 
 

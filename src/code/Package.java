@@ -7,6 +7,7 @@ public class Package {
 
     public Package(int weight){
         this.weight = weight;
+        this.state = new InTransitState();
     }
 
     public int getWeight(){
@@ -14,6 +15,7 @@ public class Package {
     }
 
     public void setShipping(Shipping shipping){
+        shipping.print();
         this.shipping = shipping;
     }
 
@@ -26,6 +28,7 @@ public class Package {
     }
 
     public void send(){
+        this.state = new DeliveredState();
 
     }
 
