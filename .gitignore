@@ -1,5 +1,8 @@
 *.class
 
+# mac users
+**/.DS_Store
+
 # Log file
 *.log
 
